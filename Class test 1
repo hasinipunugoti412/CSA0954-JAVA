@@ -1,1 +1,66 @@
+q1
+import java.util.*;
+class Reverse_string
+{
+	public static void main(String args[])
+	{
+		String s1;
+		String s2=" ";
+		int i,a;
+		Scanner s=new Scanner(System.in);
+		System.out.print("enter the string: ");
+		s1=s.nextLine();
+		a=s1.length();
+		for(i=a-1;i>=0;i--)
+		{
+			s2+=s1.charAt(i);
+		}
+		System.out.print("reversed string is"+s2);
+	}
+}
 
+
+q2
+import java.util.*;
+class Fibonacci
+{
+	public static void main(String args[])
+	{
+		Scanner s=new Scanner(System.in);
+		int n1=0,n2=1,sum=0,i;
+		System.out.println("enter the n value: ");
+		int n=s.nextInt();
+		for(i=0;i<n;i++)
+		{
+			sum=n1+n2;
+			System.out.println (n1);
+			n1=n2;
+			n2=sum;
+		}
+	}
+}
+
+q3
+import java.util.*;
+class Gcdlcm
+{
+	public static void main(String args[])
+	{
+		int i,j,gcd=1,lcm,n1,n2;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter n1:");
+		n1=s.nextInt();
+		System.out.println("enter n2:");
+		n2=s.nextInt();
+		for(i=1;i<=n1 && i<=n2;i++)
+		{
+			if(n1%i==0 && n2%i==0)
+			{
+				gcd=i;
+			}
+		}
+		System.out.println("gcd is: "+gcd);
+		lcm=(n1*n2)/gcd;
+		System.out.println("lcm is: "+lcm);
+	}
+}
