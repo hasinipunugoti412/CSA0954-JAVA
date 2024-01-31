@@ -1,0 +1,78 @@
+Q1
+import java.util.*;
+class Vowels
+{
+	public static void main(String args[])
+	{
+		int vowel=0,consonants=0,i,len;
+		char ch;
+		String s1;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the string: ");
+		s1=s.nextLine();
+		len=s1.length();
+		for(i=0;i<len;i++)
+		{
+			ch=s1.charAt(i);
+			if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+			{
+				vowel++;
+			}
+			else
+			{
+				consonants++;
+			}
+
+		}
+		System.out.println("no.of vowels are: "+vowel);
+		System.out.println("no.of consonants are: "+consonants);
+	}
+}
+
+
+Q2
+import java.util.*;
+class Fibonacci
+{
+	public static void main(String args[])
+	{
+		Scanner s=new Scanner(System.in);
+		int n1=0,n2=1,sum=0,i;
+		System.out.println("enter the n value: ");
+		int n=s.nextInt();
+		for(i=0;i<n;i++)
+		{
+			sum=n1+n2;
+			System.out.println (n1);
+			n1=n2;
+			n2=sum;
+		}
+	}
+}
+
+
+Q3
+package p1;
+
+import java.util.Scanner;
+
+public class Perfect_number {
+	public static void main (String args[]) {
+		int i,n,count=0;
+		Scanner s=new Scanner(System.in);
+		System.out.print("Enter the number= ");
+		n=s.nextInt();
+		for(i=1;i<n;i++) {
+			if(n%i==0) {
+				count=count+i;
+			}
+		}
+		if(n==count) {
+			System.out.print("Perfect number");
+		}
+		else
+		{
+			System.out.print("Not a perfect number");
+		}
+	}
+}
