@@ -1,0 +1,100 @@
+  Q1
+package classtest2;
+
+import java.util.Scanner;
+
+public class Equilateral {
+
+	public static void main(String[] args) {
+		int n;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number of rows");
+		n=sc.nextInt();
+		for(int i=n;i>0;i--) {
+			for(int j=0;j<n-i;j++) {
+				System.out.print(" ");
+			}
+				for(int j=0;j<(i*2)-1;j++) {
+					System.out.print("*");
+			}
+			System.out.print("\n");
+
+	}
+
+}
+}
+
+
+Q2
+package classtest2;
+
+import java.util.Scanner;
+
+public class marks {
+
+	public static void main(String[] args) {
+		int a,b,c,d,avg=0;
+		System.out.println("Enter marks in 1st subject");
+		Scanner sc=new Scanner(System.in);
+		a=sc.nextInt();
+		System.out.println("Enter marks in 2nd subject");
+		b=sc.nextInt();
+		System.out.println("Enter marks in 3rd subject");
+		c=sc.nextInt();
+		System.out.println("Enter marks in 4th subject");
+		d=sc.nextInt();
+		avg=(a+b+c+d)/4;
+		System.out.println("aggregate is"+avg);
+		if(avg>=75) {
+			System.out.println("Grade is Distinction");
+		}
+		else if(avg>=60 && avg<75) {
+			System.out.println("Student passed in 1st division");
+		}
+		else if(avg>=50 && avg<60) {
+			System.out.println("Student passed in 2nd division");
+		}
+		else if(avg>=40 && avg<50) {
+			System.out.println("Student passed in 3rd division");
+		}
+		else {
+			System.out.println("Student got failed");
+		}
+
+	}
+
+}
+
+
+Q3
+package p1;
+
+import java.util.Scanner;
+
+public class Square {
+
+	public static void main(String[] args) {
+		 Scanner input=new Scanner(System.in);
+		 int lower=input.nextInt();
+		 int upper=input.nextInt();
+		 int i=0,x=1;
+		 while(i<upper)
+		 {
+			 int sum=0;
+			 int y=x*x;
+			 int t=y;
+			 while(y!=0)
+			 {
+				 int rem=y%10;
+				 sum=sum+rem;
+				 y=y/10;
+			 }
+		 if(sum<10)
+		 {
+		 System.out.print(t+" ");
+		 }
+		 i=x*x;
+		 x++;
+		 }
+	}
+}
